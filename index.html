@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Journal</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Online Journal</h1>
+        <div class="controls">
+            <label for="fontSelect">Choose Font:</label>
+            <select id="fontSelect" onchange="updateFont()">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Palatino">Palatino</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Impact">Impact</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+            </select>
+
+            <label for="gradientSelect">Choose Gradient:</label>
+            <select id="gradientSelect" onchange="updateGradient()">
+                <option value="linear-gradient(to right, #ff7e5f, #feb47b)">Sunset</option>
+                <option value="linear-gradient(to right, #4facfe, #00f2fe)">Sky</option>
+                <option value="linear-gradient(to right, #43e97b, #38f9d7)">Mint</option>
+                <option value="linear-gradient(to right, #ff9a9e, #fecfef)">Peach</option>
+                <option value="linear-gradient(to right, #a1c4fd, #c2e9fb)">Cool Blues</option>
+                <option value="linear-gradient(to right, #fbc2eb, #a6c1ee)">Plum</option>
+            </select>
+        </div>
+
+        <textarea id="inputBox" placeholder="Type your journal entry here..." oninput="updateOutput()"></textarea>
+
+  
+        <button onclick="printOutput()">Print</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
